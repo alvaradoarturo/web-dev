@@ -5,33 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Facility</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
     <h1>This is an h tag, used for headers</h1>
     <h5>Please enter your name:</h5>
     <input type="text" />
-    <input type="color">
+    <input type="color" value="#FF0000">
     <input type="file">
-    <input type="checkbox">
+    <input type="checkbox" checked>
     <input type="radio">
     <input type="datetime-local">
+    <input type="number">
     <p>Hello.This is a p tag. Only used for writing text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eius, accusamus unde in quo a soluta iure aperiam est consectetur provident? Maxime quas laborum rem in, eius labore temporibus nostrum!</p>
     <p>For a second paragraph, insert another p tag. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus sequi eos expedita atque quae, dolorum blanditiis tenetur nesciunt aperiam nisi ex. Eligendi corrupti culpa eius natus aliquam quisquam rerum! Nostrum!Lorem</p>
     <p>In case you need a refresher on HTML, use MDN Document <a href="https://developer.mozilla.org/en-US/">Mozilla Documentation.</a> You can create links by using ancher tag "a".</p>
     
-    <ul>
+    <ol>
         <li>h tags</li>
         <li>p tags</li>
-        <li>anchor tags</li>
-    </ul>
-    <button>Buttons are created using "button" tag, which is not self closing</button>
-    <textarea name="essay" id="" cols="100" rows="10">
-        Enter in large text submissions here using "textarea"
-    </textarea>
+        <li class="ending-item">anchor tags</li>
+    </ol>
+
+    <h2 class="psuedoclass-example">Effects when hovered are possible by pseudoclasses. Appended by :hover</h2>
 
     <!--This is a comment. You need exclamation dash dash   -->
 
-    <div>
+    <div class="flex-practice">
+        <button>Buttons are created using "button" tag, which is not self closing</button>
+        <textarea name="essay" id="" cols="100" rows="10">
+            Enter in large text submissions here using "textarea"
+        </textarea>
         <select name="" id="">
             <option value="city">San Francisco</option>
             <option value="city">Los Angeles</option>
@@ -39,6 +43,10 @@
         </select>
     </div>
 
-    
+    <div class="btn">
+        <button class="btn-ex">Default</button>
+        <button class="btn-ex failure">Failure</button>
+        <button class="btn-ex success">Success</button>
+    </div>
 </body>
 </html>

@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(102, 185, 19);
+    font-size: 80px;
+    text-decoration: line-through;
+    border: dotted pink 4px;
+    text-align: center;
+}
+
+p {
+    font-size: large;
+    border: solid pink 1px;
+}
+
+ol {
+    list-style-type: armenian;
+    font-size: 20px;
+    border: double dodgerblue 2px;
+    text-transform: capitalize;
+    text-align: end;
+}
+
+li {
+    color:rgb(102, 185, 19)
+}
+
+.psuedoclass-example {
+    color: darkcyan;
+    text-align: center;
+}
+
+.psuedoclass-example:hover {
+    color: deeppink;
+    text-decoration: underline;
+    font-size: 26px
+}
+
+.ending-item {
+    text-align: center;
+}
+
+.flex-practice {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.btn-ex {
+    background-color: #eee;
+    border: 2px dashed #aaa;
+    margin-top: 10px;
+    padding: 4px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-ex.failure {
+    background-color: red;
+    color: white
+}
+.btn-ex.success {
+    background-color: greenyellow;
+    color: blue;
+} 
