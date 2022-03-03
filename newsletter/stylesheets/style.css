@@ -1,0 +1,41 @@
+.main-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+}
+.newsletter-body {
+    display: flex;
+}
+.top-column {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.student-desc{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    display: flex;
+    width: 25%;
+
+    border-style: solid;
+}
+.dog-picture {
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+
+    border-style: solid;
+}
+.css-description {
+    flex-direction: column;
+    display: flex;
+    width: 25%;
+
+    border-style: solid;
+}
+
+.title-section {
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
