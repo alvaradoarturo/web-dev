@@ -1,10 +1,22 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    padding: 30px 10px;
+}
+
 .main-title {
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
     text-align: center;
 }
 .newsletter-body {
-    display: flex;
+    display: inline;
+}
+
+.news {
+    padding: 20px 25px;   
 }
 .top-column {
     display: flex;
@@ -34,8 +46,40 @@
     border-style: solid;
 }
 
+.bottom-column {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .title-section {
     text-align: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 25px;
+}
+
+.random-text {
+    flex-direction: column;
+    display: flex;
+    width: 25%;
+
+    border-style: solid;
+}
+
+.colorful-category {
+    flex-direction: column;
+    display: flex;
+    width: 75%;
+
+    border-style: solid;
+}
+
+.list-for-cat{
+    padding-left: 0;
+}
+
+.coloful-category-list-item {
+    align-items: stretch;
+    list-style-type: none;
+    border-style: solid;
+    background-color: aqua; 
 }
