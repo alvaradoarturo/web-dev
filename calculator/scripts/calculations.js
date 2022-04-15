@@ -20,10 +20,19 @@ function screenCheck(valPressed){
         valToChange.innerHTML = CALCULATOR_DEFAULT;
     }
     else if(valPressed === "&lt;-"){
-        valToChange.innerHTML = valToChange.innerHTML.slice(0, -1); 
+        backspace();
     }
     else{
         valToChange.innerHTML += valPressed;
+    }
+}
+
+function backspace() {
+    if(valToChange.innerHTML.length > 1){
+        valToChange.innerHTML = valToChange.innerHTML.slice(0, -1);
+    }
+    else {
+        valToChange.innerHTML = CALCULATOR_DEFAULT;
     }
 }
 
