@@ -16,13 +16,15 @@ function screenCheck(valPressed){
     if(valToChange.innerHTML === CALCULATOR_DEFAULT){
         valToChange.innerHTML = valPressed;
     }
+    else if(valPressed === "C"){
+        valToChange.innerHTML = CALCULATOR_DEFAULT;
+    }
+    else if(valPressed === "&lt;-"){
+        valToChange.innerHTML = valToChange.innerHTML.slice(0, -1); 
+    }
     else{
         valToChange.innerHTML += valPressed;
     }
 }
 
 
-
-
-
-console.log(valToChange.innerHTML);
