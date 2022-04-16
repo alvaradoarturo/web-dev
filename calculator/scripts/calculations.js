@@ -1,39 +1,15 @@
-const CALCULATOR_DEFAULT = "0";
+let runningTotal = 0;
+let buffer = "0";
+let previousOperator;
 
-let valToChange = document.querySelector(".value");
-
-const wrapper = document.getElementById('wrapper');
-
-wrapper.addEventListener('click', (event) => {
-    const isButton = event.target.nodeName === 'BUTTON';
-    if(isButton){
-        buttonPressed = event.target.innerHTML;
-        screenCheck(buttonPressed);
-    }
+document.querySelector('.calc-buttons').addEventListener('click', function(event) {
+    buttonClick(event.target.value);
 })
 
-function screenCheck(valPressed){
-    if(valToChange.innerHTML === CALCULATOR_DEFAULT){
-        valToChange.innerHTML = valPressed;
-    }
-    else if(valPressed === "C"){
-        valToChange.innerHTML = CALCULATOR_DEFAULT;
-    }
-    else if(valPressed === "&lt;-"){
-        backspace();
-    }
-    else{
-        valToChange.innerHTML += valPressed;
+function buttonClick(value) {
+    if(isNaN(parseInt(value))) {
+        handleSymbol(value);
+    } else {
+        handleNumber(value);
     }
 }
-
-function backspace() {
-    if(valToChange.innerHTML.length > 1){
-        valToChange.innerHTML = valToChange.innerHTML.slice(0, -1);
-    }
-    else {
-        valToChange.innerHTML = CALCULATOR_DEFAULT;
-    }
-}
-
-
