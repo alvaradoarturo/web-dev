@@ -1,0 +1,17 @@
+.dog-button {
+    background-color: rgb(96, 157, 159);
+    font-size: 24px;
+    border: none;
+    text-align: center;
+    display: block;
+}
+
+.dog-button:hover {
+    background-color: rgb(47, 237, 244);
+    color: white;
+}
+
+.dog-button:active {
+    background-color: rgb(11, 100, 103);
+    color: black;
+}
