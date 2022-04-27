@@ -1,7 +1,6 @@
 let runningTotal = 0;
 let buffer = "0";
 let previousOperator;
-console.log(previousOperator);
 const screen = document.querySelector('.value');
 
 function buttonClick(value) {
@@ -13,6 +12,35 @@ function buttonClick(value) {
     rerender();
 }
 
+function flushOperation(intBuffer) {
+    if(previousOperator === '+'){
+        runningTotal += intBuffer;
+    } else if(previousOperator === '-') {
+        runningTotal -= intBuffer;
+    } else if(previousOperator === 'X') {
+        runningTotal *= intBuffer;
+    } else {
+        runningTotal /= intBuffer;
+    }
+}
+
+function handleMath(value) {
+    if(buffer === '0'){
+        return;
+    }
+
+    const intBuffer = parseInt(buffer);
+    if(runningTotal === 0){
+        runningTotal = intBuffer;
+    } else {
+        flushOperation(intBuffer);
+    }
+
+    previousOperator = value;
+
+    buffer = "0";
+}
+
 function handleNumber(value) {
     if(buffer === "0") {
         buffer = value; 
@@ -20,7 +48,6 @@ function handleNumber(value) {
         buffer += value;
     }
 }
-console.log(parseInt('+'));
 
 function handleSymbol(value) {
     switch(value) {
@@ -31,27 +58,30 @@ function handleSymbol(value) {
             console.log("Enters backspace");
             if(buffer.length === 1 ){
                 buffer = '0';
-                console.log(buffer);
             }
             else {
                 buffer = buffer.slice(0, -1);
             }
             break;
-        case "+":
-            if(previousOperator === undefined){
-                runningTotal = buffer;
-                buffer = 0;
-                previousOperator = '+';
+        case "=":
+            if(buffer === '0' || previousOperator === null){
+                return;
             }
-            else {
-                console.log(parseInt(previousOperator)); 
-            }
+            flushOperation(parseInt(buffer));
+            previousOperator = null;
+            buffer = +runningTotal;
+            runningTotal = 0;
+            break;
+        case '+':
+        case '-':
+        case 'X':
+        case '/':
+            handleMath(value);
             break;
         default:
           // code block
         console.log("Will rerender"); 
       }
-      console.log("Rerenders");
       rerender();
 }
 
